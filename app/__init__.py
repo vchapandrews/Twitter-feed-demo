@@ -24,8 +24,14 @@ def create_app():
 
             from twitter_api import collect_tweets, parse_response
 
-            response=collect_tweets(search_query + ' -is:retweet')
-            tweets = parse_response(response)
+            response = collect_tweets(search_query + ' -is:retweet')
+
+            print('RESPONSE:', response)
+
+            if response:
+                tweets = parse_response(response)
+            else:
+                tweets = None
 
         return render_template('home.html', tweets=tweets)
 
