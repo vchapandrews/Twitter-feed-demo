@@ -59,7 +59,7 @@ def get_credentials():
 
 
 
-def collect_tweets(search_query, results_per_call = 100):
+def collect_tweets(search_query, results_per_call=100):
 
     # Creating a search query
 
